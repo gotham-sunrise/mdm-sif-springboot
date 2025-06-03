@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://mdm.informatica.com/sif/party"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             targetNamespace="http://mdm.informatica.com/sif/party"
+             name="PartyService">
+
+    <message name="getPartyRequest">
+        <part name="id" type="xsd:string"/>
+    </message>
+
+    <message name="getPartyResponse">
+        <part name="result" type="xsd:string"/>
+    </message>
+
+    <portType name="PartyPortType">
+        <operation name="getParty">
+            <input message="tns:getPartyRequest"/>
+            <output message="tns:getPartyResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="PartyBinding" type="tns:PartyPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getParty">
+            <soap:operation soapAction="getParty"/>
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
+        </operation>
+    </binding>
+
+    <service name="PartyService">
+        <port name="PartyPort" binding="tns:PartyBinding">
+            <soap:address location="http://localhost:8081/ws/party"/>
+        </port>
+    </service>
+
+</definitions>

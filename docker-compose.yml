@@ -1,1 +1,28 @@
-# Placeholder docker-compose.yml
+version: '3.8'
+
+services:
+  mdm-app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    volumes:
+      - ./src:/app/src
+
+  postgres:
+    image: postgres:15
+    container_name: mdm_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER=mdmuser
+      POSTGRES_PASSWORD=mdmpass
+      POSTGRES_DB=mdmdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
