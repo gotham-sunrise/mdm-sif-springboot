@@ -1,5 +1,4 @@
 
-```markdown
 # 📦 MDM SIF Spring Boot Integration
 
 This project demonstrates how to integrate with **Informatica MDM’s Services Integration Framework (SIF)** using a **Spring Boot 3.2 application (JDK 21)**. It mocks SIF SOAP web services using WSDLs and exposes them via REST APIs with **Swagger/OpenAPI v2 documentation**, backed by a **PostgreSQL database**.
@@ -28,7 +27,7 @@ mdm-sif-springboot/
 ├── docker-compose.yml                       # PostgreSQL + app setup
 ├── pom.xml                                  # Maven dependencies
 └── README.md
-````
+```
 
 ---
 
@@ -95,6 +94,5 @@ Edit `src/main/resources/application.yml` to update database settings, ports, or
 
 MIT License — use freely and modify for enterprise use.
 
-```
 
 ---
