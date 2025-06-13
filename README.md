@@ -1,6 +1,3 @@
-Here’s a production-quality `README.md` for your `mdm-sif-springboot` project:
-
----
 
 ```markdown
 # 📦 MDM SIF Spring Boot Integration
