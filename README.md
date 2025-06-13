@@ -18,8 +18,7 @@ This project demonstrates how to integrate with **Informatica MDM’s Services I
 
 ## 📂 Structure Overview
 
-```
-
+```bash
 mdm-sif-springboot/
 ├── src/main/java/com/mdm/controller         # REST endpoints
 ├── src/main/java/com/mdm/service            # SIF client logic (mocked)
@@ -29,7 +28,6 @@ mdm-sif-springboot/
 ├── docker-compose.yml                       # PostgreSQL + app setup
 ├── pom.xml                                  # Maven dependencies
 └── README.md
-
 ````
 
 ---
